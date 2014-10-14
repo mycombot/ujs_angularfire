@@ -167,10 +167,11 @@ form .btn {
   margin: 10px;
 }
 
-.userlist ul {
+ul.userlist  {
   margin: 0;
   padding:0;
 }
+
 .userlist li {
   list-style: none;
 }
