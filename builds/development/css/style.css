@@ -14,7 +14,10 @@ html {
 body {
   font-family: 'Fauna One';
   background-color: #EEE8D6;
-  padding: 8%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 h1, h2, h3, h4, h5 {
@@ -27,6 +30,25 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 10px;
   text-shadow: 1px 1px rgba(255,255,255,0.8);
 }
+
+.container {
+    padding: 20px;
+}
+
+.branding {
+  background-color: #EEC856;
+}
+
+.branding h1 {
+  background-image: url(../images/cog.svg);
+  background-size: 55px 55px;
+  background-position: 40px center;
+  background-repeat: no-repeat;
+  font-size: 40px;
+  color: #37A198;
+  padding: 10px 0 10px 100px;
+}
+
 
 input {
   font-family: 'Fauna One';
@@ -69,6 +91,10 @@ input {
         -ms-user-select: none;
          -o-user-select: none;
             user-select: none;
+}
+
+a {
+  color: #2D8BCF;
 }
 
 a.btn {
