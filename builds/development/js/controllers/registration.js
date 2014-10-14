@@ -4,6 +4,8 @@ myApp.controller('RegistrationController',
   var ref = new Firebase('https://regtest100.firebaseio.com/' + 'users');
   var firebaseUsers = $firebase(ref);
 
+  $scope.users = $firebase(ref).$asArray();
+
   $scope.register = function() {
     var userInfo = {
       date: Firebase.ServerValue.TIMESTAMP,
@@ -13,8 +15,12 @@ myApp.controller('RegistrationController',
 
     firebaseUsers.$push(userInfo)
     	.then(function(ref) {
-		    $location.path('/thanks');
-		    console.log(ref.name());
 			});
   } //register
+
+  $scope.deleteReg = function(id) {
+    var record = $firebase(ref);
+    record.$remove(id);
+  } //delete Checkin
+
 }); //RegistrationController

@@ -21,4 +21,14 @@
     <button type="submit" class="btn"
       ng-disabled="myform.$invalid">Register</button>
   </form>
+
+  <ul class="userlist">
+    <li ng-repeat="(key, user) in users">
+      <button class="btn btn-delete tooltip"
+        confirmation-needed="Sure you want to delete the Checkin?"           
+        ng-click="deleteReg(user.$id)">
+        <span>{{user.date | date:"h:mm:ss a"}}</span></button>
+    <a href="mailto:{{user.email}}">{{user.name}}</a>
+    </li>
+  </ul><!-- Meetings List -->
 </section>
